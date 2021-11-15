@@ -31,7 +31,7 @@ int main()
 	Calc(Z, rowCount, colCount, S, C);
 	cout << "Sum = " << S << endl;
 	cout << "Count = " << C << endl;
-	//Print(Z, rowCount, colCount);
+	Print(Z, rowCount, colCount);
 
 	for (int i = 0; i < rowCount; i++)
 		delete[] Z[i];
@@ -89,7 +89,7 @@ void Calc(int** arr, const int rowCount, const int colCount, int& Sum, int& Coun
 		for (int j = 0; j < colCount; j++)
 			if (arr[i][j] % 2 == 0 && !(i % 2 != 0 || j % 2 != 0))
 			{
-				Sum += arr[i][j];
+				Sum += arr[i][j];	
 				Count++;
 				arr[i][j] = 0;
 			}
